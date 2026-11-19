@@ -57,7 +57,7 @@ RUN groupadd -g $ARGOCD_USER_ID argocd && \
     apt-get install --no-install-recommends -y \
     git=${GIT_APT_VERSION} tini ca-certificates gpg gpg-agent tzdata connect-proxy openssh-client && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/* /usr/bin/pebble
 
 COPY hack/gpg-wrapper.sh \
     hack/git-verify-wrapper.sh \
